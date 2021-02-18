@@ -34,3 +34,28 @@ var casualChar8 = favColour.charAt(randFavColour2);
 var casualChar9 = favColour.charAt(randFavColour3);
 
 document.getElementById('psw-2').innerHTML = casualChar1 + casualChar2 + casualChar3 + casualChar4 + casualChar5 + casualChar6 + casualChar7 + casualChar8 + casualChar9;
+
+//bonus 2: sperimento altre cose per scrivere un po' meno codice
+
+var nCharFirstName = firstName.length;
+var randFirstName = [Math.floor(Math.random() * nCharFirstName),Math.floor(Math.random() * nCharFirstName),Math.floor(Math.random() * nCharFirstName)];
+var casualCharsFirstName = [firstName.charAt(randFirstName[0]),firstName.charAt(randFirstName[1]),firstName.charAt(randFirstName[2])];
+
+var nCharLastName = lastName.length;
+var randLastName = [Math.floor(Math.random() * nCharLastName),Math.floor(Math.random() * nCharLastName),Math.floor(Math.random() * nCharLastName)];
+var casualCharsLastName = [lastName.charAt(randLastName[0]),lastName.charAt(randLastName[1]),lastName.charAt(randLastName[2])];
+
+var nCharFavColour = favColour.length;
+var randFavColour = [Math.floor(Math.random() * nCharFavColour),Math.floor(Math.random() * nCharFavColour),Math.floor(Math.random() * nCharFavColour)];
+var casualCharsFavColour = [favColour.charAt(randFavColour[0]),favColour.charAt(randFavColour[1]),favColour.charAt(randFavColour[2])];
+
+var psw1 = String(casualCharsFirstName);
+psw1 = psw1.replace(/,/g,'');
+
+var psw2 = String(casualCharsLastName);
+psw2 = psw2.replace(/,/g,'');
+
+var psw3 = String(casualCharsFavColour);
+psw3 = psw3.replace(/,/g,'');
+
+document.getElementById('psw-3').innerHTML = psw1 + psw2 + psw3;
